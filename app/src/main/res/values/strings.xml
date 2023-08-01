@@ -1,0 +1,12 @@
+<resources>
+    <string name="app_name">AndroidBasics</string>
+    <string name="next">Next</string>
+    <string name="back">Back</string>
+    <string name="finish">Finish</string>
+    <string name="activities">Activities</string>
+    <string name="firstActivity">First Activity</string>
+    <string name="secondActivity">Second Activity</string>
+    <string name="thirdActivity">Third Activity</string>
+    <string name="homeScreen">Home Screen</string>
+
+</resources>
