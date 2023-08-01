@@ -1,9 +1,9 @@
 package com.rishabhsoft.androidbasics
 
 import android.content.Intent
-import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import com.rishabhsoft.androidbasics.databinding.ActivityFirstBinding
+import androidx.activity.result.contract.ActivityResultContracts
+import androidx.appcompat.app.AppCompatActivity
 import com.rishabhsoft.androidbasics.databinding.ActivitySecondBinding
 
 class SecondActivity : AppCompatActivity() {
@@ -12,6 +12,15 @@ class SecondActivity : AppCompatActivity() {
      *  Defining binding variable to access UI component Easily.
      */
     private lateinit var binding: ActivitySecondBinding
+
+    // Initializing ActivityResultLauncher to launch
+    private val launcher =
+        registerForActivityResult(ActivityResultContracts.StartActivityForResult()) { result ->
+            //Handling result which is coming third Activity
+            if (result.resultCode == RESULT_OK) {
+                finish()
+            }
+        }
 
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
@@ -36,10 +45,10 @@ class SecondActivity : AppCompatActivity() {
          */
         binding.btnNext.setOnClickListener {
             /**
-             *  Stating third activity through intent
+             *  Stating third activity through start Activity for result intent
              */
-            val secondActivityIntent = Intent(this,ThirdActivity::class.java)
-            startActivity(secondActivityIntent)
+            var intent = Intent(this, ThirdActivity::class.java)
+            launcher.launch(intent)
         }
     }
 }

@@ -1,5 +1,6 @@
 package com.rishabhsoft.androidbasics
 
+import android.content.Intent
 import android.os.Bundle
 import androidx.appcompat.app.AppCompatActivity
 import com.rishabhsoft.androidbasics.databinding.ActivityThirdBinding
@@ -26,7 +27,8 @@ class ThirdActivity : AppCompatActivity() {
             /**
              *  Finishing this third activity on click of back button.
              */
-            this.finish()
+            setResult(RESULT_CANCELED)
+            finish()
         }
 
         /**
@@ -36,7 +38,8 @@ class ThirdActivity : AppCompatActivity() {
             /**
              *  Finishing the whole task/stack which have same affinity.
              */
-            this.finishAffinity()
+            setResult(RESULT_OK)
+            finish()
         }
     }
 }
