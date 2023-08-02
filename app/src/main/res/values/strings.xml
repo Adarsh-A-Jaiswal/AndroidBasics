@@ -4,9 +4,12 @@
     <string name="back">Back</string>
     <string name="finish">Finish</string>
     <string name="activities">Activities</string>
+    <string name="services">Services</string>
     <string name="firstActivity">First Activity</string>
     <string name="secondActivity">Second Activity</string>
     <string name="thirdActivity">Third Activity</string>
     <string name="homeScreen">Home Screen</string>
+    <string name="startService">Start Service</string>
+    <string name="stopService">Stop Service</string>
 
 </resources>

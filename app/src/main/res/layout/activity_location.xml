@@ -4,38 +4,26 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    tools:context=".MainActivity">
+    tools:context=".location.LocationActivity">
 
-    <TextView
-        android:id="@+id/tv_label"
-        style="@style/Widget.AndroidBasics.TextView"
+    <Button
+        android:id="@+id/btn_startService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:text="@string/homeScreen"
-        app:layout_constraintBottom_toTopOf="@+id/btn_Activities"
+        android:layout_marginTop="200dp"
+        android:text="@string/startService"
         app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.498"
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent" />
 
     <Button
-        android:id="@+id/btn_Activities"
+        android:id="@+id/btn_stopService"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_marginTop="180dp"
-        android:text="@string/activities"
+        android:layout_marginTop="44dp"
+        android:text="@string/stopService"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
-
-    <Button
-        android:id="@+id/btn_services"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="16dp"
-        android:text="@string/services"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/btn_Activities" />
-
-
+        app:layout_constraintTop_toBottomOf="@+id/btn_startService" />
 </androidx.constraintlayout.widget.ConstraintLayout>
